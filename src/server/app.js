@@ -1,5 +1,8 @@
+import { config } from "dotenv";
 import express from "express";
 import morgan from "morgan";
+
+config()
 
 const app = express()
 
