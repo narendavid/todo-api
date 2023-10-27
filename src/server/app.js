@@ -1,9 +1,11 @@
 import { config } from "dotenv";
 import express from "express";
 import morgan from "morgan";
-import userRouter from '../routes/user.routes.js'
 
 config()
+
+import userRouter from '../routes/user.routes.js'
+
 
 const app = express()
 
