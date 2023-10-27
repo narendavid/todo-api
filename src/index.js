@@ -6,7 +6,7 @@ const PORT = 3000
 
 const main = async () => {
     try {
-        await sequelize.sync({ logging: false });
+        await sequelize.sync({ logging: false, force: true });
         console.log('Connection has been established successfully.');
         app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
     } catch (error) {
