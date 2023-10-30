@@ -1,9 +1,18 @@
+import bcrypt from "bcrypt"
 import User from "../models/User.js";
+import userSchema from "../validations/user.schema.js";
 
 export const createUser = async (req, res) => {
   try {
     const { email, password, name, image } = req.body;
-    const user = { email, password, name, image };
+    const hashPassword = await bcrypt.hash(password, 10)
+    const user = {
+      email: email.trim().toLowerCase(),
+      password: hashPassword,
+      name,
+      image
+    };
+    // await userSchema.validateAsync(user)
     await User.create(user);
     return res.status(200).json({ message: 'User created successfully' });
   } catch (error) {
