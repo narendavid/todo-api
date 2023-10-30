@@ -1,7 +1,7 @@
-import * as taskRouter from  './task.routes.js';
-import * as userRouter from  './user.routes.js';
+import taskRouter from  './task.routes.js';
+import userRouter from  './user.routes.js';
 
-export default {
+export {
     taskRouter,
-    userRouter
+    userRouter,
 }
