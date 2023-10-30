@@ -4,7 +4,12 @@ import morgan from "morgan";
 
 config()
 
-import { userRouter, taskRouter } from '../routes/index.js'
+import {
+    userRouter,
+    taskRouter,
+    authRouter,
+} from '../routes/index.js'
+import verifyToken from "../middlewares/verifyToken.js";
 
 
 const app = express()
@@ -18,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/user', userRouter);
-app.use('/task', taskRouter);
+app.use('/task', verifyToken, taskRouter);
+app.use('/auth', authRouter);
 
 export default app
