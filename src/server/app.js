@@ -4,7 +4,7 @@ import morgan from "morgan";
 
 config()
 
-import userRouter from '../routes/user.routes.js'
+import {userRouter,taskRouter} from '../routes/index.js'
 
 
 const app = express()

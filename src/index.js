@@ -1,6 +1,9 @@
 import app from "./server/app.js"
 import sequelize from './database/db.js'
 import './models/User.js'
+import './models/Task.js'
+
+
 
 const PORT = 3000
 
