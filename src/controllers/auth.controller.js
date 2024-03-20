@@ -1,6 +1,6 @@
-import User from "../models/User.js"
-import jwt from "jsonwebtoken"
-import { compare } from "bcrypt"
+import User from '../models/User.js'
+import jwt from 'jsonwebtoken'
+import { compare } from 'bcrypt'
 
 export const login = async (req, res) => {
     try {

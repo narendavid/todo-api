@@ -1,6 +1,6 @@
-import  { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize'
 import sequelize from '../database/db.js'
-import User from "./User.js";
+import User from './User.js'
 
 
 const Task = sequelize.define('task', {
@@ -24,7 +24,7 @@ const Task = sequelize.define('task', {
     }
 })
 
-Task.belongsTo(User);
+Task.belongsTo(User)
 
 
 export default Task

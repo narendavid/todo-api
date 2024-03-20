@@ -1,4 +1,4 @@
-import Joi from "joi";
+import Joi from 'joi'
 
 const schema = Joi.object({
     name: Joi.string().required(),
@@ -7,4 +7,4 @@ const schema = Joi.object({
     image: Joi.string(),
 })
 
-export default schema;
+export default schema
